@@ -1,0 +1,167 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+body{
+  font-family: Verdana, sans-serif;
+  font-size: 16px;
+  color: gray; 
+}
+div.webName{
+  color: red;  
+  display: inline;
+  position: relative;
+}
+/*navigate bar*/
+nav {
+  margin:0 auto;
+  width:100%;
+  height:auto;
+  display:inline-block;
+  background:#37bc9b;
+}
+/*navigate bar elemnts*/
+nav ul {
+  margin:0;padding:0;
+  list-style-type:none;
+  display:inline-block;
+}
+/* to avoid that the dropmenu desappear too fast
+the solution was to add relative positioning and a z-index to the menu container
+how we can see behind*/
+ul {
+  padding:0px;
+  margin:0px;
+  position:relative;
+  z-index:100;
+}
+nav ul li {
+  position:relative;
+  margin:0 20px 0 0;
+  display:inline-block;
+}
+/* select all the elements where li is parent and after that apply the content*/
+li > a:after { content: ' >>'; } /* Change this in order to change the Dropdown symbol */
+/* apply the content to the a element which is the only child*/
+li > a:only-child:after { content: ''; }
+
+nav ul li a {
+  padding:20px;
+  display:inline-block;
+  color:white;
+  text-decoration:none;
+}
+
+nav ul li a:hover {
+  opacity:0.5;
+}
+
+nav ul li ul {
+  display:none;
+  position:absolute;
+  left:0;
+  background:#37bc9b;
+  float:left;
+}
+
+nav ul li ul li {
+  width:100%;
+  border-bottom:1px solid rgba(255,255,255,.3);
+}
+
+nav ul li:hover ul {
+  display:block;
+}
+
+div.welcomeMessage{
+  text-align: center;
+  float: top;
+  padding-top: 100px;
+  background-repeat: no-repeat;
+  background-size:cover
+  
+ 
+}
+h1{
+  font-family: Georgia, serif;
+  font-size: 60px;
+  color: rgb(21, 86, 228);
+  opacity: 0.3;
+}
+h2{
+  font-family: Helvetica, sans-serif;
+  font-size: 25px;
+}
+div.wantLearn{
+  text-align: center;
+}
+* {
+  box-sizing: border-box;
+}
+/* flags images*/
+.column {
+  float: left;
+  width: 20.00%;
+  padding-top: 100px;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 500px) {
+  .column {
+    width: 100%;
+  }
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* contact form*/
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+  width: 100%; /* Full width */
+  padding: 12px; /* Some padding */ 
+  border: 1px solid #ccc; /* Gray border */
+  border-radius: 4px; /* Rounded borders */
+  box-sizing: border-box; /* Make sure that padding and width stays in place */
+  margin-top: 6px; /* Add a top margin */
+  margin-bottom: 16px; /* Bottom margin */
+  resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+}
+
+/* Style the submit button with a specific background color etc */
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* When moving the mouse over the submit button, add a darker green color */
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Add a background color and some padding around the form */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+p{
+  padding:top 20px;
+  margin-top: 30px; /* Add a top margin */
+  margin-right: 30px; /* Add a top margin */
+  margin-left: 30px; /* Add a top margin */
+
+
+}
+
+.creatorsPic{
+  padding: top 60px;
+  margin-top: 6px; /* Add a top margin */
+  float: left;
+
+}
